@@ -14,10 +14,14 @@ if (!defined('ABSPATH')) {
 
 class FluentCart_Multivendor {
     public function __construct() {
-        add_action('init', [$this, 'register_vendor_role']);
-        add_action('admin_menu', [$this, 'register_admin_pages']);
-        register_activation_hook(__FILE__, [$this, 'activate_plugin']);
-    }
+    add_action('init', [$this, 'register_vendor_role']);
+    add_action('admin_menu', [$this, 'register_admin_pages']);
+    register_activation_hook(__FILE__, [$this, 'activate_plugin']);
+
+    // Include frontend vendor registration
+    require_once plugin_dir_path(__FILE__) . 'includes/vendor-registration.php';
+}
+
 
     public function activate_plugin() {
         $this->register_vendor_role();
