@@ -24,6 +24,9 @@ class FluentCart_Multivendor {
     require_once plugin_dir_path(__FILE__) . 'includes/vendor-dashboard.php';
         // Vendor Product Filter
         require_once plugin_dir_path(__FILE__) . 'includes/vendor-product-filter.php';
+        // Vendor Product Filter
+        require_once plugin_dir_path(__FILE__) . 'includes/vendor-order-filter.php';
+
 
 }
 
