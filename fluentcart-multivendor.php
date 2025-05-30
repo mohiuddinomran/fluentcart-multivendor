@@ -20,6 +20,8 @@ class FluentCart_Multivendor {
 
     // Include frontend vendor registration
     require_once plugin_dir_path(__FILE__) . 'includes/vendor-registration.php';
+        // Include vendor dashboard
+    require_once plugin_dir_path(__FILE__) . 'includes/vendor-dashboard.php';
 }
 
 
